@@ -29,8 +29,8 @@ from models.structures import Instances, Boxes, pairwise_iou, matched_boxlist_io
 from transformers import RobertaModel, RobertaTokenizerFast
 from transformers import BertTokenizerFast, BertModel
 from transformers import AutoModel, AutoTokenizer
-from torchtext.data.utils import get_tokenizer
-from torchtext.vocab import GloVe, Vocab, FastText
+# from torchtext.data.utils import get_tokenizer
+# from torchtext.vocab import GloVe, Vocab, FastText
 from einops import rearrange, repeat
 
 from .backbone import build_backbone

@@ -6,3 +6,6 @@ motmetrics
 opencv-python
 seaborn
 lap
+tensorboardX
+transformers
+einops
