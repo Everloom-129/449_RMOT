@@ -34,6 +34,7 @@ python test.py
 ### Test the model 
 ```bash
 cd ./449_RMOT
+git clone https://huggingface.co/roberta-base # install the language encoder locally
 sh configs/r50_rmot_test.sh
 ```
 If everything works well, with video set annotated, that's wonderful
