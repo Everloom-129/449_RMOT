@@ -30,7 +30,7 @@ from datasets import build_dataset
 from engine import train_one_epoch, train_one_epoch_rmot
 from models import build_model
 
-# from tensorboardX import SummaryWriter
+from tensorboardX import SummaryWriter
 
 
 def get_args_parser():
@@ -306,7 +306,7 @@ def main(args):
 
     writer_name = args.output_dir.split('/')[1]
     writer_name = os.path.join('./log', writer_name)
-    writer = None #SummaryWriter(writer_name)
+    writer = SummaryWriter(writer_name)
 
     train_func = train_one_epoch
     if args.dataset_file in ['e2e_rmot']:
