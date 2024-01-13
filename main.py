@@ -30,7 +30,7 @@ from datasets import build_dataset
 from engine import train_one_epoch, train_one_epoch_rmot
 from models import build_model
 
-from tensorboardX import SummaryWriter
+# from tensorboardX import SummaryWriter
 
 
 def get_args_parser():
@@ -154,8 +154,8 @@ def get_args_parser():
     parser.add_argument('--pretrained', default=None, help='resume from checkpoint')
     parser.add_argument('--cache_mode', default=False, action='store_true', help='whether to cache images on memory')
 
-    # end-to-end rmot settings.
-    parser.add_argument('--rmot_path', default='/data/Dataset/refer-kitti', type=str)
+    # end-to-end rmot settings. 
+    parser.add_argument('--rmot_path', default='./data/Dataset/refer-kitti', type=str)
     parser.add_argument('--input_video', default='figs/demo.mp4', type=str)
     parser.add_argument('--data_txt_path_train',
                         default='./datasets/data_path/refer-kitti.train', type=str,
@@ -306,7 +306,7 @@ def main(args):
 
     writer_name = args.output_dir.split('/')[1]
     writer_name = os.path.join('./log', writer_name)
-    writer = SummaryWriter(writer_name)
+    writer = None #SummaryWriter(writer_name)
 
     train_func = train_one_epoch
     if args.dataset_file in ['e2e_rmot']:

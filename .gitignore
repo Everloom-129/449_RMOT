@@ -11,7 +11,7 @@ tmp.ipynb
 coil-20-proc/
 exps/
 data/
-
+results_epoch99/
 # other
 *.pdf
 
