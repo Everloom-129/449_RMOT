@@ -9,6 +9,8 @@ tmp.ipynb
 
 # dataset
 coil-20-proc/
+exps/
+data/
 
 # other
 *.pdf
