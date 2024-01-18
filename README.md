@@ -43,7 +43,46 @@ Existing referring understanding tasks tend to involve the detection of a single
 ## Getting started
 ### Installation
 
-The basic environment setup is on top of [MOTR](https://github.com/megvii-research/MOTR), including conda environment, pytorch version and other requirements. 
+> The basic environment setup is on top of [MOTR](https://github.com/megvii-research/MOTR), including conda environment, pytorch version and other requirements. 
+
+> The following step is suitable for AutoDL server
+
+### Requirements
+- Linux, CUDA>=9.2, GCC>=5.4
+
+- Python>=3.7
+### This step is config in autoDL platform, which is ready
+- PyTorch>=1.5.1, torchvision>=0.6.1 (following instructions here)
+
+
+```bash
+git clone git@github.com:Everloom-129/449_RMOT.git
+cd 449_RMOT # or you can cdd, I config an alias in '.bashrc'
+pip install -r requirements.txt 
+```
+Then the necesary library is supposed to be ready
+### more library
+However, you need to pip install:
+- transformer
+- tensorboardX
+- einops
+
+### Build MultiScaleDeformableAttention
+```bash
+cd ./models/ops
+sh ./make.sh
+# unit test (should see all checking is True)
+python test.py
+```
+### Test the model 
+```bash
+cd ./449_RMOT
+git clone https://huggingface.co/roberta-base # install the language encoder locally
+sh configs/r50_rmot_test.sh
+```
+If everything works well, with video set annotated, then the rmot framework is ready. 
+
+
 
 ### Dataset
 You can download [our created expression](https://github.com/wudongming97/RMOT/releases/download/v1.0/expression.zip) and [labels_with_ids](https://github.com/wudongming97/RMOT/releases/download/v1.0/labels_with_ids.zip). 
