@@ -1,3 +1,24 @@
+# ECE449-Final-Project: RMOT with Domain Adaptation
+Jie Wang,  Mingchen Li,  Junjie Ren and Haoxuan Du
+- Nov. 15, 2023 ~ Jan. 14, 2024
+
+## Team Member Information
+
+    - Jie Wang: Leader, MOT-side, jie.20@intl.zju.edu.cn
+    - Mingchen Li: Member, LM-side, mingchen.20@intl.zju.edu.cn
+    - Junjie Ren: Member, LM-side, junjier.20@intl.zju.edu.cn
+    - Haoxuan Du: Member, MOT-side, haoxuan.20@intl.zju.edu.cn
+
+
+A four-person course project for ECE449: Machine Learning. We do investigation on  a series of SOTA model together. 
+## Final Project Milestone: Referring MOT with Domain Adaptation
+Please see this repo for our milestone plannning and final presentation. 
+
+
+
+
+---
+> Below is our expanded readme for RMOT
 # Referring Multi-Object Tracking
 
 This repository is an official implementation of the paper [Referring Multi-Object Tracking](https://arxiv.org/abs/2303.03366). More project details can be found in the [website](https://referringmot.github.io/).
